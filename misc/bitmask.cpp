@@ -2,7 +2,7 @@
 if(x & (1 << i));
 // Girar i-ésimo bit
 x ^ (1 << i);
-// cantidad de bits encendidos
+// Cantidad de bits encendidos
 __builtin_popcount(x);
 // 1 si la cantidad de bits es impar, 0 si par
 __builtin_parity(x);

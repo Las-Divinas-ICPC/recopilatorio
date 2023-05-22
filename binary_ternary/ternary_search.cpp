@@ -1,4 +1,4 @@
-// Buscando mínimo
+// Buscando minimo
 int ternarySearch(vi& arr){
     int l = 0, r = sz(arr) - 1;
     while(r-l > 2){

@@ -1,12 +1,79 @@
-% !TEX root = main.tex
-\input{preamble.tex}
+\input{res/preamble.tex}
 
 \begin{document}
+\input{res/primera_pagina.tex}
 
+\addtocontents{toc}{\setcounter{tocdepth}{1}}
+\tableofcontents
 
-%\section{Misc}
+\section{Template}
+\cppfile{res/template.cpp}
 
-%\subsection{Bitmask}
-%\cppfile{misc/bitmask.cpp}
+\section{Binary \& Ternary Search}
+
+\subsection{Binary search}
+\cppfile{binary_ternary/binary_search.cpp}
+
+\subsection{Binary lifting}
+\cppfile{binary_ternary/binary_lifting.cpp}
+
+% To-do: Revisar por qué no quiere funcionar con archivos con acentos.
+\subsection{Binary search STL}
+\cppfile{binary_ternary/bs_stl.cpp}
+
+\subsection{Ternary search}
+\cppfile{binary_ternary/ternary_search.cpp}
+
+\section{Sorting}
+
+\subsection{Merge sort}
+\cppfile{sorting/merge_sort.cpp}
+
+% To-do: Agregar quick sort.
+
+\subsection{Sort STL}
+\cppfile{sorting/sort_stl.cpp}
+
+\section{Teoría de Números}
+
+\subsection{Criterios de divisivilidad}
+\input{number_theory/criterios_divisibilidad.tex}
+
+\subsection{GCD \& LCM}
+\cppfile{number_theory/gcd_lcm.cpp}
+
+\subsection{Cribas}
+
+\subsubsection{Base}
+\cppfile{number_theory/cribas/base.cpp}
+
+\subsubsection{Vector de primos}
+\cppfile{number_theory/cribas/return_primes.cpp}
+
+\subsubsection{Descomposición factorial}
+\cppfile{number_theory/cribas/descomposicion_primos.cpp}
+
+\subsubsection{Criba de mayor divisor}
+\cppfile{number_theory/cribas/mayor_divisor.cpp}
+
+\subsubsection{Criba de número de divisores}
+\cppfile{number_theory/cribas/numero_divisores.cpp}
+
+\subsubsection{Criba de suma de divisores}
+\cppfile{number_theory/cribas/suma_divisores.cpp}
+
+% To-do: Pensar en un mejor nombre para esta clasificación
+\section{Estructuras de Datos}
+
+\subsection{Trie}
+\cppfile{data_structures/trie.cpp}
+
+\section{Misceláneo}
+
+\subsection{Bitmask}
+\cppfile{misc/bitmask.cpp}
+
+\subsection{Depuarador}
+\input{misc/gdb_lldb.tex}
 
 \end{document}

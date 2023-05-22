@@ -1,6 +1,6 @@
-// Array estático
+// Array estatico
 sort(arr, arr+n);
-// Array estático (decreciente)
+// Array estatico (decreciente)
 sort(arr, arr+n, greater<>());
 // Vector
 sort(all(arr));

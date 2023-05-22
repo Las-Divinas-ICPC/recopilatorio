@@ -1,5 +1,11 @@
-.DS_Store
+# Auxiliares LaTeX
 *.aux
 *.fdb_latexmk
 *.fls
 *.log
+
+# Los libros compilados deberían ir en releases
+*.pdf
+
+# Basura de macOS
+.DS_Store

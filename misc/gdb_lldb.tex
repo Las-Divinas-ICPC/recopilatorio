@@ -1,55 +1,84 @@
-\begin{tabular}{|l|l|}
+%\begin{tabular}{|l{0.5\textwidth}|l{0.5\textwidth}|}
+\begin{tabularx}{0.4\textwidth} {
+    | >{\raggedright\arraybackslash}X 
+    | >{\raggedright\arraybackslash}X | }
+
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Correr procesos}}\\
+    \hline
+
     \hline
     \multicolumn{1}{|c|}{\textbf{GDB}}
     &
     \multicolumn{1}{c|}{\textbf{LLDB}}\\
     \hline
-    
-    \hline
-    \multicolumn{2}{|c|}{\textbf{Correr procesos}}\\
-    \hline
+
     % GDB
-    \begin{tabular}{@{}l@{}}
+    \begin{tabular}{@{}p{1\linewidth}@{}}
         run <args>\\
         r <args>\\
     \end{tabular}
     & % LLDB
-    \begin{tabular}{@{}l@{}}
+    \begin{tabular}{@{}p{1\linewidth}@{}}
         process launch <args>\\
         run <args>\\
         r <args>\\
     \end{tabular}\\
     \hline
+\end{tabularx}
+
+\begin{tabularx}{0.4\textwidth} {
+    | >{\raggedright\arraybackslash}X 
+    | >{\raggedright\arraybackslash}X | }
 
     \hline
     \multicolumn{2}{|c|}{\textbf{Argumentos}}\\
     \hline
+
+    \hline
+    \multicolumn{1}{|c|}{\textbf{GDB}}
+    &
+    \multicolumn{1}{c|}{\textbf{LLDB}}\\
+    \hline
+
     % GDB
-    \begin{tabular}{@{}l@{}}
+    \begin{tabular}{@{}p{1\linewidth}@{}}
         \textcolor{OliveGreen}{\%} gdb --args a.out 1 2 3\\
         set args 1 2 3\\
         \textcolor{gray}{// Mostrar args}\\
         show args\\
     \end{tabular}
     & % LLDB
-    \begin{tabular}{@{}l@{}}
+    \begin{tabular}{@{}p{1\linewidth}@{}}
         \textcolor{OliveGreen}{\%} lldb -- a.out 1 2 3\\
         settings set target.run-args 1 2 3\\
         \textcolor{gray}{// Mostrar args}\\
         settings show target.run-args\\
     \end{tabular}\\
     \hline
+\end{tabularx}
+
+\begin{tabularx}{0.4\textwidth} {
+    | >{\raggedright\arraybackslash}X 
+    | >{\raggedright\arraybackslash}X | }
 
     \hline
     \multicolumn{2}{|c|}{\textbf{Variables de entorno}}\\
     \hline
+
+    \hline
+    \multicolumn{1}{|c|}{\textbf{GDB}}
+    &
+    \multicolumn{1}{c|}{\textbf{LLDB}}\\
+    \hline
+
     % GDB
-    \begin{tabular}{@{}l@{}}
+    \begin{tabular}{@{}p{1\linewidth}@{}}
         set env DEBUG=1\\
         unset env DEBUG\\
     \end{tabular}
     & % LLDB
-    \begin{tabular}{@{}l@{}}
+    \begin{tabular}{@{}p{1\linewidth}@{}}
         settings set target.env-vars DEBUG=1\\
         set se target.env-vars DEBUG=1\\
         env DEBUG=1\\
@@ -57,12 +86,24 @@
         set rem target.env-vars DEBUG\\
     \end{tabular}\\
     \hline
+\end{tabularx}
+
+\begin{tabularx}{0.4\textwidth} {
+    | >{\raggedright\arraybackslash}X 
+    | >{\raggedright\arraybackslash}X | }
 
     \hline
     \multicolumn{2}{|c|}{\textbf{Avanzar}}\\
     \hline
+
+    \hline
+    \multicolumn{1}{|c|}{\textbf{GDB}}
+    &
+    \multicolumn{1}{c|}{\textbf{LLDB}}\\
+    \hline
+
     % GDB
-    \begin{tabular}{@{}l@{}}
+    \begin{tabular}{@{}p{1\linewidth}@{}}
         \textcolor{gray}{// Step in}\\
         step\\
         s\\
@@ -75,7 +116,7 @@
         return <RETURN EXPRESSION>\\
     \end{tabular}
     & % LLDB
-    \begin{tabular}{@{}l@{}}
+    \begin{tabular}{@{}p{1\linewidth}@{}}
         \textcolor{gray}{// Step in}\\
         thread step-in\\
         step\\
@@ -91,12 +132,24 @@
         thread return <RETURN EXPRESSION>\\
     \end{tabular}\\
     \hline
+\end{tabularx}
+
+\begin{tabularx}{0.4\textwidth} {
+    | >{\raggedright\arraybackslash}X 
+    | >{\raggedright\arraybackslash}X | }
 
     \hline
     \multicolumn{2}{|c|}{\textbf{Breakpoints}}\\
     \hline
+
+    \hline
+    \multicolumn{1}{|c|}{\textbf{GDB}}
+    &
+    \multicolumn{1}{c|}{\textbf{LLDB}}\\
+    \hline
+
     % GDB
-    \begin{tabular}{@{}l@{}}
+    \begin{tabular}{@{}p{1\linewidth}@{}}
         break main\\
         b test.cpp:12\\
         \textcolor{gray}{// Set bp con condicional}\\
@@ -111,7 +164,7 @@
         delete x\\
     \end{tabular}
     & % LLDB
-    \begin{tabular}{@{}l@{}}
+    \begin{tabular}{@{}p{1\linewidth}@{}}
         breakpoint set --name main\\
         br s -f test.cpp -l 12\\
         b test.cpp:12 \textcolor{gray}{// b SÓLO SETEA!!}\\
@@ -125,7 +178,7 @@
         \textcolor{gray}{// (Des)activar y eliminar bp}\\
         breakpoint disable x\\
         br en x\\
-        br delete x\\
+        br deelete x\\
     \end{tabular}\\
     \hline
-\end{tabular}
+\end{tabularx}

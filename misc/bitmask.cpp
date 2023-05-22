@@ -1,6 +1,6 @@
-// Checar i-ésimo bit
+// Checar i-esimo bit
 if(x & (1 << i));
-// Girar i-ésimo bit
+// Girar i-esimo bit
 x ^ (1 << i);
 // Cantidad de bits encendidos
 __builtin_popcount(x);

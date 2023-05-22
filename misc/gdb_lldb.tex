@@ -1,0 +1,131 @@
+\begin{tabular}{|l|l|}
+    \hline
+    \multicolumn{1}{|c|}{\textbf{GDB}}
+    &
+    \multicolumn{1}{c|}{\textbf{LLDB}}\\
+    \hline
+    
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Correr procesos}}\\
+    \hline
+    % GDB
+    \begin{tabular}{@{}l@{}}
+        run <args>\\
+        r <args>\\
+    \end{tabular}
+    & % LLDB
+    \begin{tabular}{@{}l@{}}
+        process launch <args>\\
+        run <args>\\
+        r <args>\\
+    \end{tabular}\\
+    \hline
+
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Argumentos}}\\
+    \hline
+    % GDB
+    \begin{tabular}{@{}l@{}}
+        \textcolor{OliveGreen}{\%} gdb --args a.out 1 2 3\\
+        set args 1 2 3\\
+        \textcolor{gray}{// Mostrar args}\\
+        show args\\
+    \end{tabular}
+    & % LLDB
+    \begin{tabular}{@{}l@{}}
+        \textcolor{OliveGreen}{\%} lldb -- a.out 1 2 3\\
+        settings set target.run-args 1 2 3\\
+        \textcolor{gray}{// Mostrar args}\\
+        settings show target.run-args\\
+    \end{tabular}\\
+    \hline
+
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Variables de entorno}}\\
+    \hline
+    % GDB
+    \begin{tabular}{@{}l@{}}
+        set env DEBUG=1\\
+        unset env DEBUG\\
+    \end{tabular}
+    & % LLDB
+    \begin{tabular}{@{}l@{}}
+        settings set target.env-vars DEBUG=1\\
+        set se target.env-vars DEBUG=1\\
+        env DEBUG=1\\
+        settings remove target.env-vars DEBUG\\
+        set rem target.env-vars DEBUG\\
+    \end{tabular}\\
+    \hline
+
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Avanzar}}\\
+    \hline
+    % GDB
+    \begin{tabular}{@{}l@{}}
+        \textcolor{gray}{// Step in}\\
+        step\\
+        s\\
+        \textcolor{gray}{// Step over}\\
+        next\\
+        n\\
+        \textcolor{gray}{// Step out}\\
+        finish\\
+        \textcolor{gray}{// Return}\\
+        return <RETURN EXPRESSION>\\
+    \end{tabular}
+    & % LLDB
+    \begin{tabular}{@{}l@{}}
+        \textcolor{gray}{// Step in}\\
+        thread step-in\\
+        step\\
+        s\\
+        \textcolor{gray}{// Step over}\\
+        thread step-over\\
+        next\\
+        n\\
+        \textcolor{gray}{// Step out}\\
+        thread step-out\\
+        finish\\
+        \textcolor{gray}{// Return}\\
+        thread return <RETURN EXPRESSION>\\
+    \end{tabular}\\
+    \hline
+
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Breakpoints}}\\
+    \hline
+    % GDB
+    \begin{tabular}{@{}l@{}}
+        break main\\
+        b test.cpp:12\\
+        \textcolor{gray}{// Set bp con condicional}\\
+        break foo if n == 43\\
+        \textcolor{gray}{// Listar bp}\\
+        info break\\
+        \textcolor{gray}{// Modificar o quitar la condicional del x-ésimo bp}\\
+        cond x <CONDITION>\\
+        \textcolor{gray}{// (Des)activar y eliminar bp}\\
+        disable x\\
+        enable x\\
+        delete x\\
+    \end{tabular}
+    & % LLDB
+    \begin{tabular}{@{}l@{}}
+        breakpoint set --name main\\
+        br s -f test.cpp -l 12\\
+        b test.cpp:12 \textcolor{gray}{// b SÓLO SETEA!!}\\
+        \textcolor{gray}{// Set bp con condicional}\\
+        br s -n solve -c '(int)n == 43'\\
+        \textcolor{gray}{// Listar bp}\\
+        breakpoint list\\
+        br l\\
+        \textcolor{gray}{// Modificar o quitar la condicinal del x-ésimo bp}\\
+        br m -c '<CONDITION>' x\\
+        \textcolor{gray}{// (Des)activar y eliminar bp}\\
+        breakpoint disable x\\
+        br en x\\
+        br delete x\\
+    \end{tabular}\\
+    \hline
+\end{tabular}

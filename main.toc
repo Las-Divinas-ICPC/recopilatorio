@@ -21,5 +21,7 @@
 \contentsline {section}{\numberline {5}Estructuras de Datos}{4}{}%
 \contentsline {subsection}{\numberline {5.1}Trie}{4}{}%
 \contentsline {section}{\numberline {6}Misceláneo}{4}{}%
-\contentsline {subsection}{\numberline {6.1}Bitmask}{4}{}%
-\contentsline {subsection}{\numberline {6.2}Depuarador}{4}{}%
+\contentsline {subsection}{\numberline {6.1}Template INF}{4}{}%
+\contentsline {subsection}{\numberline {6.2}Bitmask}{4}{}%
+\contentsline {subsection}{\numberline {6.3}Ordered Set}{4}{}%
+\contentsline {subsection}{\numberline {6.4}Depuarador}{5}{}%

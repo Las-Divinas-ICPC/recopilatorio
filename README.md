@@ -3,6 +3,60 @@
 To-do:
 - [ ] Readme bonito
 - [ ] Más algoritmos y estructuras de datos
-- [ ] Convertir notas de Markdown a LaTeX
-- [ ] El archivo LaTeX pa generar el libro en sí
+- [x] Convertir notas de Markdown a LaTeX
+- [-] El archivo LaTeX pa generar el libro en sí
 - [ ] Makefile para generar el libro automáticamente (?
+
+Temas:
+- [x] Funciones del compilador para bitmaks
+- [-] Teoria de numeros
+    - [x] Divisibilidad
+    - [x] Cribas
+        - [x] Criba de primo
+        - [x] Cribas de divisores
+        - [x] Criba de suma de divisores
+        - [x] Cribas de numero de divisores
+        - [x] Cribas de numero de primos
+    - [x] GCD y LMC
+    - [ ] Funciones de fastpow, etc
+    - [ ] Propiedades de los modulos
+- [ ] Combinatoria
+    - [ ] Formula de gauss
+    - [ ] Permutacion
+    - [ ] Combinacion 
+    - [ ] Triángulo de Pascal
+- [-] Ordenamientos y busquedas
+    - [x] Binary Lifting
+    - [x] Binary Search 
+    - [x] Merge Sort
+    - [ ] Quick Sort
+    - [x] Busqueda Ternaria
+- [ ] Grafos
+    - [ ] BFS 
+    - [ ] DFS (recursiva e iterativa)
+    - [ ] Dijkstra
+    - [ ] PRIM
+    - [ ] BFS 01
+    - [ ] Bellman Ford
+- [ ] Strings
+    - [ ] KMP
+- [ ] Recursividad
+- [ ] Dynamic Programming
+    - [ ] Problema clasico de solucion minima y maxima
+    - [ ] Problema clasico de cantidad de soluciones
+    - [ ] Knapsack
+- [ ] Disjoint Set Union (DSU)
+- [ ] Geometría
+    - [ ] Producto punto entre vectores
+    - [ ] Producto cruz dentro de vectores
+    - [ ] Punto dentro de un polígono
+    - [ ] Funciones geométricas
+    - [ ] Intersección de líneas
+    - [ ] Área de polígonos 
+- [ ] Algebra lineal
+    - [ ] Multiplicación de matrices 
+- [-] Estructuras de datos	
+    - [x] Trie
+    - [ ] Segment tree
+    - [ ] Fenwick Tree
+- [-] Manual depurador

@@ -57,6 +57,7 @@ Temas:
     - [ ] Multiplicación de matrices 
 - [-] Estructuras de datos	
     - [x] Trie
-    - [ ] Segment tree
-    - [ ] Fenwick Tree
+    - [ ] Segment Tree
+    - [ ] Lazy segment Tree
+    - [x] Fenwick Tree
 - [-] Manual depurador

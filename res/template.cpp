@@ -18,6 +18,8 @@ void solve(){
 }
 
 int main(){
+    // freopen("file.in","r",stdin);
+    // freopen("file.out","w",stdout);
     IO;
     //int t; cin>>t; while(t--)
     solve();

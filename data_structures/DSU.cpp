@@ -1,6 +1,6 @@
 struct dsu{
     vi parent; //A que conjunto pertenece
-    vi z; //Tamaño del conjunto
+    vi z; //Tamanio del conjunto
 
     void init(int n){
         parent = vi(n);
@@ -14,7 +14,7 @@ struct dsu{
         return parent[v];
     }
 
-    //True: Ambos nodos pertenecen a distintos conjuntos antes de la union,
+    //True: Ambos nodos pertenecen a distintos conjuntos antes de la union
     bool unite(int v1, int v2){
         v1 = get(v1);
         v2 = get(v2);

@@ -19,7 +19,7 @@ Temas:
         - [x] Cribas de numero de primos
     - [x] GCD y LMC
     - [ ] Funciones de fastpow, etc
-    - [ ] Propiedades de los modulos
+    - [x] Operaciones modulares
 - [ ] Combinatoria
     - [ ] Formula de gauss
     - [ ] Permutacion
@@ -31,21 +31,21 @@ Temas:
     - [x] Merge Sort
     - [ ] Quick Sort
     - [x] Busqueda Ternaria
-- [ ] Grafos
-    - [ ] BFS 
-    - [ ] DFS (recursiva e iterativa)
-    - [ ] Dijkstra
+- [-] Grafos
+    - [x] BFS 
+    - [x] DFS (recursiva e iterativa)
+    - [x] Dijkstra
     - [ ] PRIM
-    - [ ] BFS 01
-    - [ ] Bellman Ford
-- [ ] Strings
-    - [ ] KMP
+    - [x] BFS 01
+    - [x] Bellman Ford
+- [?] Strings
+    - [x] KMP
+    - [x] Longest Substring
 - [ ] Recursividad
 - [ ] Dynamic Programming
     - [ ] Problema clasico de solucion minima y maxima
     - [ ] Problema clasico de cantidad de soluciones
     - [ ] Knapsack
-- [ ] Disjoint Set Union (DSU)
 - [ ] Geometría
     - [ ] Producto punto entre vectores
     - [ ] Producto cruz dentro de vectores
@@ -57,6 +57,7 @@ Temas:
     - [ ] Multiplicación de matrices 
 - [-] Estructuras de datos	
     - [x] Trie
+    - [x] Disjoint Set Union (DSU)
     - [ ] Segment Tree
     - [ ] Lazy segment Tree
     - [x] Fenwick Tree

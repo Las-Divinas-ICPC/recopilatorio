@@ -1,11 +1,3 @@
-/*Modulo properties
-    (a + b) mod m = (a mod m + b mod m) mod m
-    (a − b) mod m = (a mod m − b mod m) mod m
-    (a · b) mod m = (a mod m · b mod m) mod m
-*/
-
-typedef long long lli;
- 
 const lli mod = 1e9 + 7;
  
 lli sum(lli a, lli b){

@@ -1,5 +1,3 @@
-//directed or undirected non-negative weighted graph
-//shortest path from one vertex to all others
 for (int i = 1; i <= n; i++) distance[i] = INF;
 distance[x] = 0;
 q.push({0,x});

@@ -1,11 +1,4 @@
-/* A graph is connected if there is a path between any two nodes of the graph.
-    A graph contains a cycle if during a graph traversal, we find a node whose
-neighbor (other than the previous node in the current path) has already been
-visited.
-*/
-
-
-vector<int> adj[N];
+vi adj[N];
 bool visited[N];
 
 void dfs(int s) {
@@ -18,7 +11,7 @@ void dfs(int s) {
 }
 
 /*DFS without visited array */
-vector<int>dis(N);
+vi dis(N);
 void dfs (int u, int d = 0, int pr = -1){
     dis[u] = d;
     for(auto v: u){
@@ -28,7 +21,7 @@ void dfs (int u, int d = 0, int pr = -1){
 }
 
 /* Iterative DFS */
-void Graph::DFS(int s, vector<bool> &visited){
+void Graph::DFS(int s, vector<bool>& visited){
     stack<int> stack;
     stack.push(s);
  

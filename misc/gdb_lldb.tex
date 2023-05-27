@@ -6,7 +6,6 @@
     \multicolumn{2}{|c|}{\textbf{Correr procesos}}\\
     \hline
 
-    \hline
     \multicolumn{1}{|c|}{\textbf{GDB}}
     &
     \multicolumn{1}{c|}{\textbf{LLDB}}\\
@@ -34,7 +33,6 @@
     \multicolumn{2}{|c|}{\textbf{Redirigir IO}}\\
     \hline
 
-    \hline
     \multicolumn{1}{|c|}{\textbf{GDB}}
     &
     \multicolumn{1}{c|}{\textbf{LLDB}}\\
@@ -63,7 +61,6 @@
     \multicolumn{2}{|c|}{\textbf{Argumentos}}\\
     \hline
 
-    \hline
     \multicolumn{1}{|c|}{\textbf{GDB}}
     &
     \multicolumn{1}{c|}{\textbf{LLDB}}\\
@@ -94,7 +91,6 @@
     \multicolumn{2}{|c|}{\textbf{Variables de entorno}}\\
     \hline
 
-    \hline
     \multicolumn{1}{|c|}{\textbf{GDB}}
     &
     \multicolumn{1}{c|}{\textbf{LLDB}}\\
@@ -124,7 +120,6 @@
     \multicolumn{2}{|c|}{\textbf{Avanzar}}\\
     \hline
 
-    \hline
     \multicolumn{1}{|c|}{\textbf{GDB}}
     &
     \multicolumn{1}{c|}{\textbf{LLDB}}\\
@@ -149,6 +144,7 @@
     & % LLDB
     \begin{tabular}{@{}p{\linewidth}@{}}
         continue\\
+        c\\
         \textcolor{RedOrange}{// Ignorar los siguientes n bp del mismo}\\
         c -i n\\
         \textcolor{RedOrange}{// Ignorar los siguientes n del x-ésimo bp}\\
@@ -178,7 +174,6 @@
     \multicolumn{2}{|c|}{\textbf{Breakpoints}}\\
     \hline
 
-    \hline
     \multicolumn{1}{|c|}{\textbf{GDB}}
     &
     \multicolumn{1}{c|}{\textbf{LLDB}}\\
@@ -227,7 +222,6 @@
     \multicolumn{2}{|c|}{\textbf{Watchpoints}}\\
     \hline
 
-    \hline
     \multicolumn{1}{|c|}{\textbf{GDB}}
     &
     \multicolumn{1}{c|}{\textbf{LLDB}}\\
@@ -235,35 +229,52 @@
 
     % GDB
     \begin{tabular}{@{}p{\linewidth}@{}}
-        break main\\
-        b test.cpp:12\\
-        \textcolor{RedOrange}{// Set bp con condicional}\\
-        break foo if n == 43\\
-        \textcolor{RedOrange}{// Listar bp}\\
+        watch global\_var\\
+        \textcolor{RedOrange}{// Listar wp}\\
         info break\\
-        \textcolor{RedOrange}{// Modificar o quitar la condicional del x-ésimo bp}\\
-        cond x <CONDITION>\\
-        \textcolor{RedOrange}{// (Des)activar y eliminar bp}\\
+        \textcolor{RedOrange}{// (Des)activar y eliminar wp}\\
         disable x\\
         enable x\\
         delete x\\
     \end{tabular}
     & % LLDB
     \begin{tabular}{@{}p{\linewidth}@{}}
-        breakpoint set --name main\\
-        br s -f test.cpp -l 12\\
-        b test.cpp:12 \textcolor{RedOrange}{// b SÓLO SETEA!!}\\
-        \textcolor{RedOrange}{// Set bp con condicional}\\
-        br s -n solve -c '(int)n == 43'\\
-        \textcolor{RedOrange}{// Listar bp}\\
-        breakpoint list\\
-        br l\\
-        \textcolor{RedOrange}{// Modificar o quitar la condicinal del x-ésimo bp}\\
-        br m -c '<CONDITION>' x\\
-        \textcolor{RedOrange}{// (Des)activar y eliminar bp}\\
-        breakpoint disable x\\
-        br en x\\
-        br delete x\\
+        watchpoint set variable global\_var\\
+        wa s v global\_var\\
+        \textcolor{RedOrange}{// Condicional en wp}\\
+        wa modify -c '<CONDITION>'
+        \textcolor{RedOrange}{// Listar wp}\\
+        watchpoint list
+        watch l
+        \textcolor{RedOrange}{// Eliminar wp}\\
+        watchpoint delete x\\
+        watch del x\\
+    \end{tabular}\\
+    \hline
+\end{tabularx}
+
+\begin{tabularx}{0.5\textwidth} {
+    | >{\raggedright\arraybackslash}X 
+    | >{\raggedright\arraybackslash}X | }
+
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Examinar variables}}\\
+    \hline
+
+    \multicolumn{1}{|c|}{\textbf{GDB}}
+    &
+    \multicolumn{1}{c|}{\textbf{LLDB}}\\
+    \hline
+
+    % GDB
+    \begin{tabular}{@{}p{\linewidth}@{}}
+        info args\\
+        info locals\\
+    \end{tabular}
+    & % LLDB
+    \begin{tabular}{@{}p{\linewidth}@{}}
+        frame variable\\
+        fr v --no-args \textcolor{RedOrange}{// -a versión corta}\\
     \end{tabular}\\
     \hline
 \end{tabularx}

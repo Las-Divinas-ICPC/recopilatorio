@@ -1,0 +1,17 @@
+#include <cmath>
+
+// Radians to degrees
+double radToDeg(double radian){
+  return radian * (180 / M_PI);
+}
+
+// Getting factorials
+const int LIM = 20;
+vector<lli> factorial(int lim){
+  vector<lli> fact;
+  int i;
+  fact.push_back((long)1);
+  fore(i, 1, lim)  
+    fact.push_back((fact[i - 1] * i));
+}
+

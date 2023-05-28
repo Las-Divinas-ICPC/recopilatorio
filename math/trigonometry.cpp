@@ -11,7 +11,7 @@ double deg2rad(double deg) {
     return deg * M_PI / 180.0;
 }
 
-// Ejemplo de uso de funciones trigonométricas
+// Ejemplo de uso de funciones trigonometricas
 double sin(double deg) {
     return std::sin(deg2rad(deg));
 }
